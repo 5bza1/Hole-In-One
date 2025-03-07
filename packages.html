@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>هول إن ون - الحزم</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="hero">
+        <h1>هول إن ون</h1>
+        
+    </section>
+    <main>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">الصفحة الرئيسية</a></li>
+                <li><a href="packages.html">صفحة الحزم</a></li>
+                <li><a href="store.html">صفحة المتجر</a></li>
+                <li><a href="training.html">صفحة التدريب</a></li>
+                <li><a href="login.html">تسجيل دخول</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">
+                        <img src="access.png" alt="خيارات ذوي الاحتياجات الخاصة" class="access-icon">
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="javascript:playSound()">تكبير</a>
+                        <a href="javascript:zoomIn()">تكبير الحجم</a>
+                        <a href="javascript:zoomOut()">تصغير الحجم</a>
+                        <a href="javascript:resetZoom()">إعادة ضبط الحجم</a>
+                        <a href="javascript:changeLanguage('ar')">العربية</a>
+                        <a href="javascript:changeLanguage('en')">الإنجليزية</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    
+        <section class="packages">
+            <h2>الحزم</h2>
+            <div class="package">
+                <h3>خمس جولات</h3>
+                <p>إقامة كاملة لمدة خمس ليال في جناح فاخر، خمس جولات - 18 حفرة، جولة واحدة مضمونة في ملعب "سي فيو" الشهير، جلسة تدريب رقمية مجاناً.</p>
+                <a href="booking.html">احجز الآن</a>
+            </div>
+            <div class="package">
+                <h3>الجولة الثلاثية</h3>
+                <p>إقامة لمدة ليلتين في غرفة مزدوجة مع وجبة الإفطار، ثلاث جولات - 18 حفرة، تشمل خوض جولة واحدة في ملعب "سي فيو" الشهير (إن وجدت)، تأجير مجاني للعربات، خصم 20% لمتجر المحترفين.</p>
+                <a href="booking.html">احجز الآن</a>
+            </div>
+            <div class="package">
+                <h3>استراحة استجمام</h3>
+                <p>إقامة لليلة واحدة مع وجبة إفطار كاملة، تناول العشاء في أي من مطاعم المنتجع، الوصول إلى الملاعب (تطبق الرسوم ويستبعد ملعب "سي فيو")، تأجير نادي مجاني.</p>
+                <a href="booking.html">احجز الآن</a>
+            </div>
+            <div class="package">
+                <h3>حزم مخصصة</h3>
+                <p>نوفر حزم مخصصة للفعاليات المؤسسية والإقامات الطويلة. يرجى الاتصال بنا لترتيب أي حزم مخصصة.</p>
+                <a href="support.html">اتصل بنا</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="support.html">اتصل بنا</a> | <a href="support.html">الدعم الفني</a></p>
+        <p>حساب الانستغرام | حساب فيس بوك | حساب التويتر</p>
+    </footer>
+    <audio id="audio" src="tcbeer.mp3" loop></audio>
+    <script>
+        let currentZoom = 100; // حجم التكبير الحالي
+    
+        function zoomIn() {
+            currentZoom += 10;
+            document.body.style.zoom = currentZoom + "%";
+        }
+    
+        function zoomOut() {
+            currentZoom -= 10;
+            document.body.style.zoom = currentZoom + "%";
+        }
+    
+        function resetZoom() {
+            currentZoom = 100;
+            document.body.style.zoom = "100%";
+        }
+    
+        function changeLanguage(lang) {
+            // يمكنك إضافة كود لتغيير اللغة هنا
+            if (lang === 'ar') {
+                alert("تم تغيير اللغة إلى العربية"); // رسالة مؤقتة
+            } else if (lang === 'en') {
+                alert("تم تغيير اللغة إلى الإنجليزية"); // رسالة مؤقتة
+            }
+        }
+        function playSound() {
+            const audio = document.getElementById('audio');
+            audio.play();
+        }
+    </script>
+</body>
+</html>
